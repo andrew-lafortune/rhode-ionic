@@ -1,0 +1,79 @@
+<ion-header>
+  <ion-toolbar mode="md" color="primary"> </ion-toolbar>
+  <ion-toolbar mode="md" color="primary">
+    <ion-title>Create Account</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form [formGroup]="createACForm" action="">
+    <ion-item fill="outline">
+      <ion-label position="floating">First Name</ion-label>
+      <ion-input
+        type="text"
+        formControlName="firstName"
+        placeholder=""
+      ></ion-input>
+    </ion-item>
+    <ion-item fill="outline">
+      <ion-label position="floating">Last Neame</ion-label>
+      <ion-input
+        type="text"
+        formControlName="lastName"
+        placeholder=""
+      ></ion-input>
+    </ion-item>
+    <ion-item fill="outline">
+      <ion-label position="floating">Email Address</ion-label>
+      <ion-input
+        type="email"
+        formControlName="email"
+        placeholder=""
+      ></ion-input>
+    </ion-item>
+    <ion-item fill="outline">
+      <ion-label position="floating">Company Name</ion-label>
+      <ion-input
+        type="text"
+        formControlName="companyName"
+        placeholder=""
+      ></ion-input>
+    </ion-item>
+    <ion-item fill="outline" mode="md">
+      <ion-label position="floating">Password</ion-label>
+      <ion-input
+        [type]="passwordType"
+        formControlName="password"
+        placeholder=""
+      ></ion-input>
+      <ion-icon
+        item-end
+        [name]="passwordIcon"
+        class="passwordIcon"
+        (click)="hideShowPassword()"
+      ></ion-icon>
+    </ion-item>
+
+    <ion-card>
+      <h6>Add a profile pricture</h6>
+    </ion-card>
+  </form>
+
+  <ion-button class="commonSubmitBtn" (click)="createClick()" fill="outline"
+    >Create Account
+  </ion-button>
+</ion-content>
+<ion-footer class="ion-no-border">
+  <ion-toolbar mode="md">
+    <ion-buttons slot="start">
+      <ion-button (click)="back()">
+        <ion-icon slot="icon-only" name="chevron-back-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button color="primary" class="ion-text-capitalize" fill="clear">
+        Rhode
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

@@ -1,0 +1,32 @@
+ion-content {
+  --padding-start: 20px;
+  --padding-end: 20px;
+  --padding-top: 10px;
+  --padding-bottom: 20px;
+
+  ion-item {
+    margin: 15px 0;
+  }
+
+  ion-button {
+    margin: 10px 0;
+  }
+
+  .passwordIcon {
+    position: absolute;
+    top: 15px !important;
+    margin: 0 auto !important;
+    right: 15px;
+    z-index: 10;
+  }
+  ion-card {
+    width: 120px;
+    height: 120px;
+    margin: 10px auto;
+    padding: 10px;
+    box-shadow: none;
+    border: 1px dotted grey;
+    display: flex;
+    align-items: center;
+  }
+}

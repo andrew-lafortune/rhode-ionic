@@ -1,0 +1,69 @@
+ion-content {
+  --padding-start: 20px;
+  --padding-end: 20px;
+  --adding-top: 20px;
+  --padding-bottom: 20px;
+
+  .action {
+    margin: 0;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    color: #141414;
+  }
+
+  .action-card {
+    background: #f1f1f1;
+    border-radius: 8px;
+    width: 100%;
+    height: 100px;
+    box-shadow: none;
+    display: grid;
+    justify-items: center;
+    align-content: center;
+    margin: 0;
+    padding: 10px;
+
+    .add {
+      font-size: 36px;
+      margin-bottom: 5px;
+    }
+    p {
+      margin: 0;
+      font-weight: 400;
+      font-size: 16px;
+      color: #000000;
+    }
+  }
+  .dialogs {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    color: #141414;
+  }
+  .chat_item {
+    --padding-start: 0;
+
+    ion-avatar {
+      width: 45px;
+      height: 45px;
+      margin-right: 10px;
+    }
+    ion-label {
+      white-space: normal !important;
+
+      h3 {
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 19px;
+        color: #000000;
+      }
+      p {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 16px;
+        color: #b5b5b5;
+      }
+    }
+  }
+}

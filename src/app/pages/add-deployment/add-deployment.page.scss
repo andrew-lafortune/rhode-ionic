@@ -1,0 +1,37 @@
+ion-content {
+  --padding-start: 20px;
+  --padding-end: 20px;
+  --padding-bottom: 20px;
+  --padding-top: 20px;
+
+  .title-card {
+    background: var(--ion-color-primary);
+    box-shadow: none;
+    margin: 0;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    color: #f1f1f1;
+  }
+  h4 {
+    margin: 5px 0;
+  }
+  .desc {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #b5b5b5;
+  }
+  .save-btn {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

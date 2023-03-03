@@ -1,0 +1,42 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar mode="md">
+    <ion-buttons slot="start">
+      <ion-button (click)="back()">
+        <ion-icon slot="icon-only" name="chevron-back-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title> Main Menu</ion-title>
+    <ion-buttons slot="end">
+      <ion-button id="add-deploy">
+        <ion-icon slot="icon-only" name="ellipsis-horizontal"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card class="title-card">
+    <span>Insert Name Here</span>
+  </ion-card>
+  <h4 class="common_subtitle">Documentation</h4>
+  <p class="desc">Embed Notes</p>
+  <h4 class="common_subtitle">
+    Deployment Breakdown (Give the ability to look up stories via story number
+    here)
+  </h4>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="4">
+        <ion-button> Story 01 </ion-button>
+      </ion-col>
+      <ion-col size="4"> <ion-button> Story 02 </ion-button></ion-col>
+      <ion-col size="4"> <ion-button> Story 03 </ion-button></ion-col>
+      <ion-col size="4"> <ion-button> Story 04 </ion-button></ion-col>
+      <ion-col size="4"> <ion-button> Story 05 </ion-button></ion-col>
+      <ion-col size="4"> <ion-button> Story 06 </ion-button></ion-col>
+    </ion-row>
+  </ion-grid>
+  <div class="save-btn">
+    <ion-button> Save </ion-button>
+  </div>
+</ion-content>

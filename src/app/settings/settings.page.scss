@@ -1,0 +1,30 @@
+ion-content {
+  --padding-start: 20px;
+  --padding-end: 20px;
+  --padding-top: 20px;
+  --padding-bottom: 20px;
+
+  ion-searchbar {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  h4 {
+    margin: 5px 0;
+    font-size: 16px;
+    color: #000000;
+    font-weight: 600;
+  }
+  ion-item {
+    --padding-start: 0;
+    --inner-padding-end: 0;
+  }
+  ion-button {
+    width: 40px;
+    height: 40px;
+    background: #e4e8f1;
+    border-radius: 8px;
+    ion-icon {
+      font-size: 26px;
+    }
+  }
+}

@@ -1,0 +1,39 @@
+<ion-header class="ion-no-border">
+    <ion-toolbar mode="md" mode="md">
+    <ion-buttons slot="start">
+      <ion-button (click)="back()">
+        <ion-icon slot="icon-only" name="chevron-back-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title> Chat</ion-title>
+    <ion-buttons slot="end">
+      <ion-button>
+        <ion-icon slot="icon-only" name="ellipsis-horizontal"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item class="chat_item" lines="none">
+    <ion-avatar>
+      <img src="assets/icon/blank-profile-picture-973460_1280.webp" />
+    </ion-avatar>
+    <ion-label>
+      <h3>Noah Brammer</h3>
+      <p>Hey, story is #2342 is ready for UAT testing</p>
+    </ion-label>
+  </ion-item>
+  <hr />
+  <div class="time">
+    <span>11:24pm 9/2/2022</span>
+  </div>
+  <ng-container *ngFor="let item of chatingArr">
+    <div *ngIf="!item.me" class="leftChat">
+      <span> {{item.value}} </span>
+    </div>
+    <div *ngIf="item.me" class="rightChat">
+      <span> {{item.value}} </span>
+    </div>
+  </ng-container>
+</ion-content>

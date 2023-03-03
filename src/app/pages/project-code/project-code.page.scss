@@ -1,0 +1,36 @@
+ion-content {
+  --padding-start: 20px;
+  --padding-end: 20px;
+  --padding-top: 10%;
+  --padding-bottom: 20px;
+  .prt_code {
+    margin: 0;
+    font-size: 18px;
+    color: #000000;
+    font-weight: 600;
+  }
+  .remember {
+    margin: 0;
+    font-size: 18px;
+    color: #000000;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    ion-checkbox {
+      margin-left: 10px;
+    }
+  }
+  ion-searchbar {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  ion-card {
+    background: var(--ion-color-primary);
+    box-shadow: none;
+    padding: 10px;
+    color: #ffffff;
+    text-align: center;
+    margin: 10px;
+  }
+}

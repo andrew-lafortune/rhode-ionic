@@ -1,0 +1,56 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar mode="md">
+    <ion-buttons slot="start">
+      <ion-button (click)="back()">
+        <ion-icon slot="icon-only" name="chevron-back-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title> Chat</ion-title>
+    <ion-buttons slot="end">
+      <ion-button>
+        <ion-icon slot="icon-only" name="ellipsis-horizontal"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-searchbar mode="ios"></ion-searchbar>
+  <h4 class="action">Actions</h4>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="4">
+        <ion-card class="action-card">
+          <p>Ask for Help</p>
+        </ion-card>
+      </ion-col>
+      <ion-col size="4">
+        <ion-card class="action-card">
+          <p>Request a Feature</p>
+        </ion-card>
+      </ion-col>
+      <ion-col size="4">
+        <ion-card class="action-card">
+          <ion-icon color="primary" class="add" name="add-circle"></ion-icon>
+          <p>New Dialogs</p>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <h6 class="dialogs">Dialogs</h6>
+  <ion-item
+    class="chat_item"
+    (click)="chatClick(item)"
+    lines="none"
+    *ngFor="let item of [0,1,2,3,4,5]"
+  >
+    <ion-avatar>
+      <img src="assets/icon/blank-profile-picture-973460_1280.webp" />
+    </ion-avatar>
+    <ion-label>
+      <h3>Noah Brammer</h3>
+      <p>Hey, story is #2342 is ready for UAT testing</p>
+    </ion-label>
+    <ion-badge slot="end">2</ion-badge>
+  </ion-item>
+</ion-content>

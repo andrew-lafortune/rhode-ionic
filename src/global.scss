@@ -1,0 +1,57 @@
+/*
+ * App Global CSS
+ * ----------------------------------------------------------------------------
+ * Put style rules here that you want to apply globally. These styles are for
+ * the entire app and not just one component. Additionally, this file can be
+ * used as an entry point to import other CSS/Sass files to be included in the
+ * output CSS.
+ * For more information on global stylesheets, visit the documentation:
+ * https://ionicframework.com/docs/layout/global-stylesheets
+ */
+
+/* Core CSS required for Ionic components to work properly */
+@import "~@ionic/angular/css/core.css";
+
+/* Basic CSS for apps built with Ionic */
+@import "~@ionic/angular/css/normalize.css";
+@import "~@ionic/angular/css/structure.css";
+@import "~@ionic/angular/css/typography.css";
+@import "~@ionic/angular/css/display.css";
+
+/* Optional CSS utils that can be commented out */
+@import "~@ionic/angular/css/padding.css";
+@import "~@ionic/angular/css/float-elements.css";
+@import "~@ionic/angular/css/text-alignment.css";
+@import "~@ionic/angular/css/text-transformation.css";
+@import "~@ionic/angular/css/flex-utils.css";
+
+.commonSubmitBtn {
+  --background: var(--ion-color-primary);
+  --border-radius: 12px;
+  --color: #fff;
+  width: 100%;
+  height: 50px;
+  font-style: normal;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 18px;
+  --box-shadow: none;
+  margin: 0;
+  text-transform: capitalize;
+}
+.commonTextLine {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box !important;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.common_subtitle {
+  font-weight: 700;
+  font-size: 16px;
+  color: #000000;
+  margin: 0;
+}
+ion-title {
+  text-align: center;
+}

@@ -1,0 +1,65 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar mode="md">
+    <ion-buttons slot="start">
+      <ion-button (click)="back()">
+        <ion-icon slot="icon-only" name="chevron-back-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title> Settings</ion-title>
+    <ion-buttons slot="end">
+      <ion-button>
+        <ion-icon slot="icon-only" name="ellipsis-horizontal"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-searchbar mode="ios"></ion-searchbar>
+  <h4>Main Settings</h4>
+  <ion-item mode="md" lines="none">
+    <ion-button mode="md" slot="start" fill="clear">
+      <ion-icon
+        mode="md"
+        color="primary"
+        name="notifications-outline"
+      ></ion-icon>
+    </ion-button>
+    <ion-label mode="md">Notifications</ion-label>
+    <ion-icon mode="md" slot="end" name="chevron-forward-outline"></ion-icon>
+  </ion-item>
+  <h4>Theme</h4>
+  <ion-item mode="md" lines="none">
+    <ion-button mode="md" slot="start" fill="clear">
+      <ion-icon mode="md" color="primary" name="moon-outline"></ion-icon>
+    </ion-button>
+    <ion-label mode="md">Dark Theme</ion-label>
+    <ion-icon mode="md" slot="end" name="chevron-forward-outline"></ion-icon>
+  </ion-item>
+  <ion-item mode="md" lines="none">
+    <ion-button mode="md" slot="start" fill="clear">
+      <ion-icon mode="md" color="primary" name="contrast-outline"></ion-icon>
+    </ion-button>
+    <ion-label mode="md">Colors</ion-label>
+    <ion-icon mode="md" slot="end" name="chevron-forward-outline"></ion-icon>
+  </ion-item>
+  <h4>Other</h4>
+  <ion-item mode="md" lines="none">
+    <ion-button mode="md" slot="start" fill="clear">
+      <ion-icon
+        mode="md"
+        color="primary"
+        name="information-circle-outline"
+      ></ion-icon>
+    </ion-button>
+    <ion-label mode="md">About us</ion-label>
+    <ion-icon mode="md" slot="end" name="chevron-forward-outline"></ion-icon>
+  </ion-item>
+  <ion-item mode="md" lines="none">
+    <ion-button mode="md" slot="start" fill="clear">
+      <ion-icon mode="md" color="primary" name="image-outline"></ion-icon>
+    </ion-button>
+    <ion-label mode="md">Spread the word</ion-label>
+    <ion-icon mode="md" slot="end" name="chevron-forward-outline"></ion-icon>
+  </ion-item>
+</ion-content>
