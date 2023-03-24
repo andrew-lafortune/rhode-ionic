@@ -1,15 +1,128 @@
-<ion-header [translucent]="true">
+<ion-header class="ion-no-border">
   <ion-toolbar mode="md">
-    <ion-title> Tab 2 </ion-title>
+    <ion-buttons slot="start">
+      <ion-button (click)="back()">
+        <ion-icon slot="icon-only" name="chevron-back-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title> Main Menu</ion-title>
+    <ion-buttons slot="end">
+      <ion-button id="request">
+        <ion-icon slot="icon-only" name="ellipsis-horizontal"></ion-icon>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
-
+<ion-popover trigger="request" triggerAction="click">
+  <ng-template>
+    <ion-button size="large" class="add" (click)="newFeatureClick()"
+      >Request a new Feature</ion-button
+    >
+    <ion-button size="large" class="add"
+      >Ask a Question about this Feature</ion-button
+    >
+    <ion-button size="large" class="add">Schedule a Meeting</ion-button>
+  </ng-template>
+</ion-popover>
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar mode="md">
-      <ion-title size="large">Tab 2</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <h4 class="title_gray">Project Progression</h4>
+  <ion-card class="table_card">
+    <table>
+      <tr>
+        <th></th>
+        <th>M</th>
+        <th>T</th>
+        <th>W</th>
+        <th>TH</th>
+        <th>F</th>
+        <th>M</th>
+        <th>T</th>
+        <th>TH</th>
+        <th>F</th>
+      </tr>
+      <tr *ngFor="let item of tableChart">
+        <td>{{item.label}}</td>
+        <td [style]="{background:item.m}"></td>
+        <td [style]="{background:item.t}"></td>
+        <td [style]="{background:item.w}"></td>
+        <td [style]="{background:item.th}"></td>
+        <td [style]="{background:item.f}"></td>
+        <td [style]="{background:item.m2}"></td>
+        <td [style]="{background:item.t2}"></td>
+        <td [style]="{background:item.th2}"></td>
+        <td [style]="{background:item.f2}"></td>
+      </tr>
+    </table>
+  </ion-card>
+  <h4 class="title_gray">Exspense by Resource</h4>
+  <ion-card class="resources_card">
+    <div echarts [options]="lineChart" class="demo-chart"></div>
+  </ion-card>
+  <h4 class="title_gray">Aggregate Burn Rate</h4>
+  <ion-card class="aggregate_card">
+    <span>$ 24,938.87</span>
+  </ion-card>
+  <h4 class="title_gray">Stories Rolled in Project</h4>
+  <ion-card class="basechart-card">
+    <div echarts [options]="baseChart" class="demo-chart"></div>
+  </ion-card>
+  <h4 class="title_gray">Stories Rolled in Sprint</h4>
+  <ion-card class="sprint_card">
+    <ion-grid>
+      <ion-row>
+        <ion-col size="7">
+          <h1>Sprint 1</h1>
+        </ion-col>
+        <ion-col size="5">
+          <ion-button
+            class="storybtn"
+            (click)="story01Click()"
+            expand="block"
+            fill="clear"
+            >Story 01</ion-button
+          >
+          <ion-button
+            class="storybtn"
+            (click)="story01Click()"
+            expand="block"
+            fill="clear"
+            >Story 02</ion-button
+          >
+          <ion-button
+            class="storybtn"
+            (click)="story01Click()"
+            expand="block"
+            fill="clear"
+            >Story 03</ion-button
+          >
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-card>
+  <ion-segment mode="ios" value="YTD" (ionChange)="segmentChanged($event)">
+    <ion-segment-button value="Bi-Weekly">
+      <ion-label>Bi-Weekly</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="Monthly">
+      <ion-label>Monthly</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="YTD">
+      <ion-label>YTD</ion-label>
+    </ion-segment-button>
+  </ion-segment>
 
-  <app-explore-container name="Tab 2 page"></app-explore-container>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="6">
+        <ion-card class="request">
+          <h4>Request a New Feature</h4>
+        </ion-card>
+      </ion-col>
+      <ion-col size="6">
+        <ion-card class="request">
+          <h4>Contact your Team</h4>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>

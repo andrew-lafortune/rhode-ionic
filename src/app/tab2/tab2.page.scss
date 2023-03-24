@@ -1,0 +1,109 @@
+ion-content {
+  --padding-start: 20px;
+  --padding-end: 20px;
+
+  ion-segment-button {
+    --color-checked: #ffffff;
+    // --background-checked: var(--ion-color-primary);
+    // --background-checked: var(--ion-color-primary);
+    --indicator-color: var(--ion-color-primary);
+  }
+  .title_gray {
+    color: gray;
+    font-size: 18px;
+    font-weight: 500;
+    margin: 0;
+  }
+  .table_card {
+    margin: 8px 0;
+    padding: 10px;
+    background: var(--ion-color-primary);
+    box-shadow: none;
+    table {
+      width: 100%;
+    }
+    tr,
+    th,
+    td {
+      border: 1px solid #000000;
+    }
+    th,
+    td {
+      color: #ffffff;
+      font-size: 12px;
+      padding: 2px;
+    }
+  }
+  .resources_card {
+    height: 200px;
+    width: 100%;
+    box-shadow: none;
+    margin: 10px 0;
+    div {
+      height: 200px;
+    }
+  }
+
+  .basechart-card {
+    padding: 10px;
+    margin: 10px 0;
+    box-shadow: none;
+
+    div {
+      height: 200px;
+    }
+  }
+  .request {
+    display: flex;
+    background: var(--ion-color-primary);
+    color: #ffffff;
+    padding: 10px;
+    box-shadow: none;
+    border-radius: 12px;
+    h4 {
+      margin: 0;
+    }
+  }
+
+  .aggregate_card {
+    box-shadow: none;
+    border-radius: 12px;
+    background: var(--ion-color-primary);
+    height: 120px;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    font-size: 24px;
+    margin: 10px 0;
+  }
+  .sprint_card {
+    box-shadow: none;
+    border-radius: 12px;
+    background: var(--ion-color-primary);
+    padding: 10px;
+    margin: 10px 0;
+    h1 {
+      margin: 0;
+      font-size: 24px;
+      color: #ffffff;
+    }
+
+    .storybtn {
+      color: #000000;
+      margin: 8px 0;
+      background: #ffffff;
+      text-transform: capitalize;
+      border-radius: 6px;
+    }
+  }
+}
+.add {
+  font-size: 12px;
+  color: #ffffff;
+  background: var(--ion-color-primary);
+  text-transform: capitalize;
+  margin: 4px 8px;
+  --box-shadow: none;
+  border-radius: 6px;
+}

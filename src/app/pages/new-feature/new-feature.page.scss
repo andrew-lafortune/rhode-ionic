@@ -1,0 +1,39 @@
+ion-content {
+  --padding-start: 20px;
+  --padding-end: 20px;
+
+  .top_card {
+    box-shadow: none;
+    border-radius: 12px;
+    background: var(--ion-color-primary);
+    padding: 10px;
+    margin: 0;
+    height: 100px;
+    display: grid;
+    align-content: center;
+    p {
+      margin: 0;
+      color: #ffffff;
+      font-size: 18px;
+    }
+  }
+  h4 {
+    margin: 5px 0;
+  }
+  .desc {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #b5b5b5;
+    margin: 0;
+  }
+  .sendbtn {
+    padding-top: 20px;
+    width: 100%;
+    text-align: center;
+  }
+
+  ion-button {
+    --box-shadow: none;
+  }
+}

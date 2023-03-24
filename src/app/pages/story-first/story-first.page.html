@@ -1,0 +1,96 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar mode="md">
+    <ion-buttons slot="start">
+      <ion-button (click)="back()">
+        <ion-icon slot="icon-only" name="chevron-back-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title> Main Menu</ion-title>
+    <ion-buttons slot="end">
+      <ion-button id="request">
+        <ion-icon slot="icon-only" name="ellipsis-horizontal"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card class="top_card">
+    <p>Story #01</p>
+    <p>Technical Documentation</p>
+  </ion-card>
+  <h4 class="common_subtitle">Description</h4>
+  <p class="desc">
+    Service Agents have numerous clicks when adding time to a specific work
+    order. Jarrett Fire has expressed the desire for this process to be
+    streamlined to only 2-3 clicks.
+  </p>
+  <h4 class="common_subtitle">Acceptance Criteria</h4>
+  <p class="desc">
+    -I expect two buttons "Time In" and "Time Out" to be viewable on the
+    Timesheet page when attempting -I expect this to update any relevant fields
+    including but not limited to the "time out field"
+  </p>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="6">
+        <ion-button expand="block" class="high-btn">
+          Priority: High
+        </ion-button>
+        <ion-button expand="block" class="high-btn"> Status: Dev </ion-button>
+        <ion-button expand="block" class="high-btn">
+          Dev: Noah Brammer
+        </ion-button>
+      </ion-col>
+      <ion-col size="6">
+        <ion-button expand="block" class="high-btn">
+          Due Date: 6/27/12
+        </ion-button>
+        <ion-button expand="block" class="high-btn">
+          QA: Vasek Cervenka
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <h4 class="common_subtitle">Hours Allocated</h4>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="5">
+        <div>
+          <p class="hrs">9/18/2022</p>
+          <p class="hrs">12:25pm-4.25(4 hours)</p>
+        </div>
+        <div>
+          <p class="hrs">9/12/2022</p>
+          <p class="hrs">7.30pm-4.45(3.25 hours)</p>
+        </div>
+      </ion-col>
+      <ion-col size="7">
+        <ion-card class="hrs_card">
+          <div echarts [options]="options" class="demo-chart"></div>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="7">
+        <ion-card class="totalhr_card">
+          <p>Total Hours</p>
+          <h1>8.25</h1>
+        </ion-card>
+      </ion-col>
+      <ion-col size="5">
+        <ion-button class="total_days" expand="block"
+          >Days Blocked: 0</ion-button
+        >
+        <ion-button class="total_days mtb" expand="block"
+          >Days in Dev: 4</ion-button
+        >
+        <ion-button class="total_days" expand="block"
+          >Days in QA: 4.25</ion-button
+        >
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

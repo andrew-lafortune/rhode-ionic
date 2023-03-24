@@ -1,10 +1,16 @@
 import { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
-  appId: 'io.ionic.starter',
+  appId: 'io.rhode.starter',
   appName: 'rhode',
   webDir: 'www',
-  bundledWebRuntime: false
+  bundledWebRuntime: false,
+
+  plugins: {
+    CapacitorHttp: {
+      enabled: true,
+    },
+  },
 };
 
 export default config;

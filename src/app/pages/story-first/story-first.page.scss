@@ -1,0 +1,77 @@
+ion-content {
+  --padding-start: 20px;
+  --padding-end: 20px;
+
+  .top_card {
+    box-shadow: none;
+    border-radius: 12px;
+    background: var(--ion-color-primary);
+    padding: 10px;
+    margin: 0;
+    height: 100px;
+    display: grid;
+    align-content: center;
+    p {
+      margin: 0;
+      color: #ffffff;
+      font-size: 18px;
+    }
+  }
+  h4 {
+    margin: 5px 0;
+  }
+  .desc {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #b5b5b5;
+  }
+
+  .high-btn {
+    text-transform: capitalize;
+    --box-shadow: none;
+    margin: 8px 0;
+  }
+
+  .totalhr_card {
+    box-shadow: none;
+    border-radius: 6px;
+    background: var(--ion-color-primary);
+    padding: 10px;
+    margin: 0;
+    color: #ffffff;
+    height: 125px;
+
+    p {
+      margin: 0;
+      font-size: 16px;
+    }
+    h1 {
+      font-size: 60px;
+      margin: 0;
+    }
+  }
+  .total_days {
+    text-transform: capitalize;
+    box-shadow: none;
+    margin: 0;
+  }
+  .mtb {
+    margin: 8px 0;
+  }
+
+  .hrs {
+    color: gray;
+    font-size: 11px;
+    margin: 0;
+    padding-bottom: 5px;
+  }
+  .hrs_card {
+    margin: 0;
+    box-shadow: none;
+    div {
+      height: 250px;
+      width: 100%;
+    }
+  }
+}

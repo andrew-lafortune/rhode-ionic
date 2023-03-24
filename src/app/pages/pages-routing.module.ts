@@ -37,11 +37,28 @@ const routes: Routes = [
             (m) => m.DeploymentViewPageModule
           ),
       },
+      {
+        path: 'add-deployment',
+        loadChildren: () =>
+          import('./add-deployment/add-deployment.module').then(
+            (m) => m.AddDeploymentPageModule
+          ),
+      },
+      {
+        path: 'story-first',
+        loadChildren: () =>
+          import('./story-first/story-first.module').then(
+            (m) => m.StoryFirstPageModule
+          ),
+      },
+      {
+        path: 'new-feature',
+        loadChildren: () =>
+          import('./new-feature/new-feature.module').then(
+            (m) => m.NewFeaturePageModule
+          ),
+      },
     ],
-  },
-  {
-    path: 'add-deployment',
-    loadChildren: () => import('./add-deployment/add-deployment.module').then( m => m.AddDeploymentPageModule)
   },
 ];
 

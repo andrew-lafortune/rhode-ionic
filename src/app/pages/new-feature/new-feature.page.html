@@ -1,0 +1,67 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar mode="md">
+    <ion-buttons slot="start">
+      <ion-button (click)="back()">
+        <ion-icon slot="icon-only" name="chevron-back-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title> Feature Request</ion-title>
+    <ion-buttons slot="end">
+      <ion-button id="request">
+        <ion-icon slot="icon-only" name="ellipsis-horizontal"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card class="top_card">
+    <p>Story Name (Enter Here)</p>
+  </ion-card>
+  <h4 class="common_subtitle">Description</h4>
+  <p class="desc">
+    Enter a brief description of what you would like to accomplish.
+  </p>
+  <h4 class="common_subtitle">Acceptance Criteria</h4>
+  <p class="desc">What do you expect of this new functionality?</p>
+  <p class="desc">-Criteria 1</p>
+  <p class="desc">-Criteria 2</p>
+  <p class="desc">-Criteria 3</p>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="6">
+        <ion-item fill="outline" color="primary">
+          <ion-select interface="popover" placeholder="Priority:">
+            <ion-select-option value="Low">Low</ion-select-option>
+            <ion-select-option value="Medium">Medium</ion-select-option>
+            <ion-select-option value="High">High</ion-select-option>
+            <ion-select-option value="Highest">Highest</ion-select-option>
+          </ion-select>
+        </ion-item>
+      </ion-col>
+      <ion-col size="6">
+        <ion-button
+          expand="block"
+          (click)="dueDateClick()"
+          fill="solid"
+          class="ion-text-capitalize"
+        >
+          Due Date: {{selectedDueDate | date:'dd/MM/yyyy'}}
+        </ion-button>
+        <ion-input type="file" #file hidden placeholder=""></ion-input>
+        <ion-button
+          expand="block"
+          (click)="fileUpload(file)"
+          class="ion-text-capitalize"
+        >
+          Upload File
+          <ion-icon slot="end" name="share-outline"></ion-icon>
+        </ion-button>
+        <!-- <ion-datetime></ion-datetime> -->
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <div class="sendbtn">
+    <ion-button class="ion-text-capitalize"> Send it! </ion-button>
+  </div>
+</ion-content>

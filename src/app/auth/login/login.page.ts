@@ -6,6 +6,7 @@ import {
   Validators,
 } from '@angular/forms';
 import { NavController } from '@ionic/angular';
+import { SupabaseService } from 'src/app/core/services/supabase.service';
 
 @Component({
   selector: 'app-login',
@@ -18,7 +19,8 @@ export class LoginPage implements OnInit {
   passwordIcon: string = 'eye-off';
   constructor(
     private formBuilder: FormBuilder,
-    private navCtrl: NavController
+    private navCtrl: NavController,
+    private supabase: SupabaseService
   ) {}
 
   ngOnInit(): void {
@@ -45,5 +47,9 @@ export class LoginPage implements OnInit {
   signinClick() {
     console.log(this.loginForm.value);
     this.navCtrl.navigateForward(['/pages/project-code']);
+    // this.supabase.signIn(
+    //   this.loginForm.value.email,
+    //   this.loginForm.value.password
+    // );
   }
 }
