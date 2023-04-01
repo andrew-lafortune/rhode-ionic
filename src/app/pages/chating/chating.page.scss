@@ -72,3 +72,8 @@ ion-content {
     }
   }
 }
+ion-footer {
+  ion-toolbar {
+    --padding-start: 20px;
+  }
+}

@@ -13,11 +13,15 @@
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
-
+<ion-popover trigger="add-deploy" triggerAction="click">
+  <ng-template>
+    <ion-button class="add">Add a Deployment</ion-button>
+  </ng-template>
+</ion-popover>
 <ion-content>
   <ion-textarea
     class="textstory"
-    placeholder="Ceebo Deployment #24 9/01/2022 Sprint 11"
+    value="Ceebo Deployment #24 9/01/2022 Sprint 11"
   ></ion-textarea>
   <!-- <ion-card class="title-card">
     <span>Ceebo Deployment #24 9/01/2022 Sprint 11</span>

@@ -65,7 +65,18 @@
       </tr>
     </table>
   </ion-card>
-  <h4 class="title_gray">Exspense by Resource</h4>
+  <h4 class="title_gray">Expense by Resource</h4>
+  <ion-segment mode="ios" value="YTD">
+    <ion-segment-button value="Bi-Weekly">
+      <ion-label>Bi-Weekly</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="Monthly">
+      <ion-label>Monthly</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="YTD">
+      <ion-label>YTD</ion-label>
+    </ion-segment-button>
+  </ion-segment>
   <ion-card class="resources_card">
     <div echarts [options]="lineChart" class="demo-chart"></div>
   </ion-card>

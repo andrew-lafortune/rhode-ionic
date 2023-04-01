@@ -7,13 +7,17 @@
     </ion-buttons>
     <ion-title> Settings</ion-title>
     <ion-buttons slot="end">
-      <ion-button>
+      <ion-button id="add-deploy">
         <ion-icon slot="icon-only" name="ellipsis-horizontal"></ion-icon>
       </ion-button>
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
-
+<ion-popover trigger="add-deploy" triggerAction="click">
+  <ng-template>
+    <ion-button class="add">Add a Deployment</ion-button>
+  </ng-template>
+</ion-popover>
 <ion-content>
   <ion-item fill="clear" lines="none" class="search_item">
     <ion-icon slot="start" name="search"></ion-icon>
