@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController } from '@ionic/angular';
+import { environment } from 'src/environments/environment';
 import { DataService } from '../core/services/data.service';
 
 @Component({
@@ -24,7 +25,7 @@ export class Tab1Page {
   getList(boardId: string) {
     this.dataService
       .getMethod(
-        `boards/${boardId}/lists?key=d3a85c83bfa6994a2c9d7fb7bd8b6966&token=ATTAc288567681b4f7a5c10ad58835b094d881f9555a586ae4f405b4db5433b064722F724EC0`
+        `boards/${boardId}/lists?key=${environment.key}&token=${environment.token}`
       )
       .then(
         (result) => {

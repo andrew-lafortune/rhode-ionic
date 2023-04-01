@@ -36,4 +36,17 @@ ion-content {
   ion-button {
     --box-shadow: none;
   }
+
+  .priority {
+    --background: var(--ion-color-primary);
+    --color: #ffffff;
+  }
+}
+.textstory {
+  background: #4847cc;
+  border-radius: 12px;
+  color: white;
+  --placeholder-color: white;
+  --placeholder-opacity: 1;
+  height: 100px;
 }

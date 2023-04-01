@@ -19,7 +19,11 @@
   </ng-template>
 </ion-popover>
 <ion-content>
-  <ion-searchbar mode="ios"></ion-searchbar>
+  <ion-item fill="clear" lines="none" class="search_item">
+    <ion-icon slot="start" name="search"></ion-icon>
+    <ion-input class="" type="search" placeholder="Search"> </ion-input>
+  </ion-item>
+
   <h6 class="history">History</h6>
   <ng-container *ngFor="let item of [0,1,2,3,4,5,6,7,8,9,10,]; let i = index;">
     <ion-item

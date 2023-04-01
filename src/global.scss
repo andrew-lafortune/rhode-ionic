@@ -54,9 +54,20 @@
 }
 ion-title {
   text-align: center;
+  color: #000000;
 }
 .due-date-css {
   width: 300px;
   margin: auto;
   height: 400px;
+}
+.search_item {
+  --padding-start: 0;
+  --background: #f1f1f1;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  ion-icon {
+    margin-right: 5px;
+    margin-left: 10px;
+  }
 }

@@ -65,5 +65,11 @@ ion-content {
         color: #b5b5b5;
       }
     }
+    ion-badge {
+      border-radius: 50%;
+      width: 25px;
+      height: 25px;
+      line-height: 19px;
+    }
   }
 }

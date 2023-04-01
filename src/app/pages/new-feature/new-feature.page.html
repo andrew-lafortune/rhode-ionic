@@ -15,27 +15,48 @@
 </ion-header>
 
 <ion-content>
-  <ion-card class="top_card">
+  <!-- <ion-card class="top_card">
     <p>Story Name (Enter Here)</p>
-  </ion-card>
+  </ion-card> -->
+  <!-- <ion-input type="text" placeholder="Story Name (Enter Here)"></ion-input> -->
+  <ion-textarea
+    class="textstory"
+    placeholder="Story Name (Enter Here)"
+  ></ion-textarea>
   <h4 class="common_subtitle">Description</h4>
-  <p class="desc">
-    Enter a brief description of what you would like to accomplish.
-  </p>
+
+  <ion-textarea
+    class=""
+    placeholder="Enter a brief description of what you would like to accomplish."
+  ></ion-textarea>
   <h4 class="common_subtitle">Acceptance Criteria</h4>
-  <p class="desc">What do you expect of this new functionality?</p>
+  <!-- <p class="desc">What do you expect of this new functionality?</p>
   <p class="desc">-Criteria 1</p>
   <p class="desc">-Criteria 2</p>
-  <p class="desc">-Criteria 3</p>
+  <p class="desc">-Criteria 3</p> -->
+  <ion-textarea
+    class=""
+    rows="5"
+    placeholder="What do you expect of this new functionality?&#10;Criteria1&#10;Criteria 2"
+  ></ion-textarea>
   <ion-grid>
     <ion-row>
       <ion-col size="6">
-        <ion-item fill="outline" color="primary">
-          <ion-select interface="popover" placeholder="Priority:">
-            <ion-select-option value="Low">Low</ion-select-option>
-            <ion-select-option value="Medium">Medium</ion-select-option>
-            <ion-select-option value="High">High</ion-select-option>
-            <ion-select-option value="Highest">Highest</ion-select-option>
+        <ion-item fill="outline" color="primary" class="priority">
+          <ion-select
+            [value]="priority"
+            (ionChange)="changePriority($event)"
+            interface="popover"
+            placeholder="Priority"
+          >
+            <ion-select-option value="Priority: Low">Low</ion-select-option>
+            <ion-select-option value="Priority: Medium"
+              >Medium</ion-select-option
+            >
+            <ion-select-option value="Priority: High">High</ion-select-option>
+            <ion-select-option value="Priority: Highest"
+              >Highest</ion-select-option
+            >
           </ion-select>
         </ion-item>
       </ion-col>
@@ -48,14 +69,15 @@
         >
           Due Date: {{selectedDueDate | date:'dd/MM/yyyy'}}
         </ion-button>
-        <ion-input type="file" #file hidden placeholder=""></ion-input>
+
         <ion-button
           expand="block"
-          (click)="fileUpload(file)"
+          (click)="fileUpload()"
           class="ion-text-capitalize"
         >
           Upload File
           <ion-icon slot="end" name="share-outline"></ion-icon>
+          <ion-input type="file" #file hidden placeholder=""></ion-input>
         </ion-button>
         <!-- <ion-datetime></ion-datetime> -->
       </ion-col>

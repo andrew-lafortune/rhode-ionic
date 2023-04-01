@@ -26,4 +26,18 @@ ion-content {
     line-height: 19px;
     color: #b5b5b5;
   }
+
+  ion-button {
+    text-transform: capitalize;
+    --box-shadow: none;
+    margin: 0;
+  }
+}
+.textstory {
+  background: #4847cc;
+  border-radius: 12px;
+  color: white;
+  --placeholder-color: white;
+  --placeholder-opacity: 1;
+  height: 100px;
 }

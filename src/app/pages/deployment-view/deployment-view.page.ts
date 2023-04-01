@@ -13,4 +13,7 @@ export class DeploymentViewPage implements OnInit {
   back() {
     this.navCtrl.back();
   }
+  story01Click() {
+    this.navCtrl.navigateForward(['/pages/story-first']);
+  }
 }

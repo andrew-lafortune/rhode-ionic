@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 
 import { NavController, PopoverController } from '@ionic/angular';
+import { environment } from 'src/environments/environment';
 import { DataService } from '../core/services/data.service';
 
 @Component({
@@ -13,6 +14,7 @@ export class Tab2Page implements OnInit {
   lineChart: any;
   tableChart: any = [];
   lists: any = [];
+  sprintArray: any = [];
   constructor(
     private navCtrl: NavController,
     private popCtrl: PopoverController,
@@ -75,19 +77,19 @@ export class Tab2Page implements OnInit {
       },
       series: [
         {
-          name: 'Email',
+          name: 'resource name',
           type: 'line',
           stack: 'Total',
-          data: [120, 132, 101, 134, 90, 230, 210],
+          data: ['res1', 'res1', 'res1', 'res2', 'res1', 'res1', 'res1'],
         },
         {
-          name: 'Union Ads',
+          name: 'Hourly rate',
           type: 'line',
           stack: 'Total',
           data: [220, 182, 191, 234, 290, 330, 310],
         },
         {
-          name: 'Video Ads',
+          name: 'cost',
           type: 'line',
           stack: 'Total',
           data: [150, 232, 201, 154, 190, 330, 410],
@@ -95,23 +97,7 @@ export class Tab2Page implements OnInit {
       ],
     };
   }
-  baseCharts() {
-    this.baseChart = {
-      xAxis: {
-        type: 'category',
-        data: ['Sprint 1', 'Sprint 2', 'Sprint 3', 'Sprint 4', 'Sprint 5'],
-      },
-      yAxis: {
-        type: 'value',
-      },
-      series: [
-        {
-          data: [120, 200, 150, 80, 70],
-          type: 'bar',
-        },
-      ],
-    };
-  }
+  baseCharts() {}
   tableCharts() {
     this.tableChart = [
       {
@@ -203,12 +189,34 @@ export class Tab2Page implements OnInit {
   getList(boardId: string) {
     this.dataService
       .getMethod(
-        `boards/${boardId}/lists?key=d3a85c83bfa6994a2c9d7fb7bd8b6966&token=ATTAc288567681b4f7a5c10ad58835b094d881f9555a586ae4f405b4db5433b064722F724EC0`
+        `boards/${boardId}/customFields?key=${environment.key}&token=${environment.token}`
       )
       .then(
         (result) => {
           console.log('here;', result);
           this.lists = result;
+          result.forEach((element: any) => {
+            if (element.id === '634ae12097a32700991d7c5f') {
+              this.sprintArray = element.options;
+            }
+          });
+
+          this.baseChart = {
+            xAxis: {
+              type: 'category',
+              data: this.sprintArray.map((x: any) => x.value.text),
+            },
+            yAxis: {
+              type: 'value',
+            },
+            series: [
+              {
+                data: [120, 200, 150, 80, 70, 10, 12, 30, 20, 50],
+                type: 'bar',
+              },
+            ],
+          };
+          console.log(this.sprintArray);
         },
         (err) => {
           console.log(err);

@@ -1,5 +1,5 @@
 <ion-header class="ion-no-border">
-    <ion-toolbar mode="md" mode="md">
+  <ion-toolbar mode="md" mode="md">
     <ion-buttons slot="start">
       <ion-button (click)="back()">
         <ion-icon slot="icon-only" name="chevron-back-outline"></ion-icon>
@@ -31,8 +31,10 @@
   <ng-container *ngFor="let item of chatingArr">
     <div *ngIf="!item.me" class="leftChat">
       <span> {{item.value}} </span>
+      <p></p>
     </div>
     <div *ngIf="item.me" class="rightChat">
+      <p></p>
       <span> {{item.value}} </span>
     </div>
   </ng-container>
